@@ -20,7 +20,7 @@ public class HealthController {
     @GetMapping("health")
     public String health() throws InterruptedException {
         CountDownLatch c = new CountDownLatch(3);
-//        System.out.println(Runtime.getRuntime().availableProcessors());
+        System.out.println(Runtime.getRuntime().availableProcessors());
         long t = System.currentTimeMillis();
         for (int i = 0; i < 3; i++) {
             healthService.sleep(i, c);
